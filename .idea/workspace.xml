@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="0a7e858e-a843-4c0a-8126-79cbfb42a250" name="Default Changelist" comment="" />
+    <list default="true" id="0a7e858e-a843-4c0a-8126-79cbfb42a250" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -11,30 +13,42 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/05.Go语言函数/5.7_函数类型实现接口.go">
+        <entry file="file://$PROJECT_DIR$/05.Go语言函数/5.07_函数类型实现接口.go">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="124">
-              <caret line="23" column="17" lean-forward="true" selection-start-line="23" selection-start-column="17" selection-end-line="23" selection-end-column="17" />
+              <caret line="23" column="17" selection-start-line="23" selection-start-column="17" selection-end-line="23" selection-end-column="17" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/05.Go语言函数/5.8_闭包.go">
+        <entry file="file://$PROJECT_DIR$/05.Go语言函数/5.08_闭包.go">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="158">
-              <caret line="64" column="36" lean-forward="true" selection-start-line="64" selection-start-column="36" selection-end-line="64" selection-end-column="36" />
+              <caret line="64" column="36" selection-start-line="64" selection-start-column="36" selection-end-line="64" selection-end-column="36" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/05.Go语言函数/5.09_可变参数.go">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1349">
+              <caret line="95" column="11" selection-start-line="95" selection-start-column="11" selection-end-line="95" selection-end-column="11" />
+              <folding>
+                <element signature="e#14#37#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/05.Go语言函数/5.9_可变参数.go">
+        <entry file="file://$PROJECT_DIR$/05.Go语言函数/5.10_延迟执行语句(defer).go">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="252">
-              <caret line="96" column="11" lean-forward="true" selection-start-line="96" selection-start-column="11" selection-end-line="96" selection-end-column="11" />
+            <state relative-caret-position="874">
+              <caret line="46" column="1" lean-forward="true" selection-start-line="46" selection-start-column="1" selection-end-line="46" selection-end-column="1" />
               <folding>
-                <element signature="e#14#37#0" expanded="true" />
+                <element signature="e#140#165#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -54,7 +68,7 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/05.Go语言函数/5.7_函数类型实现接口.go" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/05.Go语言函数/5.07_函数类型实现接口.go" root0="SKIP_INSPECTION" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -64,6 +78,8 @@
         <option value="$PROJECT_DIR$/05.Go语言函数/5.7_函数类型实现接口.go" />
         <option value="$PROJECT_DIR$/05.Go语言函数/5.8_闭包.go" />
         <option value="$PROJECT_DIR$/05.Go语言函数/5.9_可变参数.go" />
+        <option value="$PROJECT_DIR$/05.Go语言函数/5.09_可变参数.go" />
+        <option value="$PROJECT_DIR$/05.Go语言函数/5.10_延迟执行语句(defer).go" />
       </list>
     </option>
   </component>
@@ -103,6 +119,7 @@
   <component name="PropertiesComponent">
     <property name="DefaultGoTemplateProperty" value="Go File" />
     <property name="GO_FMT" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="go.gopath.indexing.explicitly.defined" value="true" />
     <property name="go.import.settings.migrated" value="true" />
@@ -129,7 +146,15 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Go Build.go build 5.9_可变参数.go">
+  <component name="RunManager" selected="Go Build.go build 5.10_延迟执行语句(defer).go">
+    <configuration name="go build 5.10_延迟执行语句(defer).go" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
+      <module name="golearning" />
+      <working_directory value="$PROJECT_DIR$/" />
+      <kind value="FILE" />
+      <filePath value="$PROJECT_DIR$/05.Go语言函数/5.10_延迟执行语句(defer).go" />
+      <directory value="$PROJECT_DIR$/" />
+      <method v="2" />
+    </configuration>
     <configuration name="go build 5.7_函数类型实现接口.go" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
       <module name="golearning" />
       <working_directory value="$PROJECT_DIR$/" />
@@ -156,6 +181,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Go Build.go build 5.10_延迟执行语句(defer).go" />
         <item itemvalue="Go Build.go build 5.9_可变参数.go" />
         <item itemvalue="Go Build.go build 5.8_闭包.go" />
         <item itemvalue="Go Build.go build 5.7_函数类型实现接口.go" />
@@ -166,7 +192,7 @@
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.1461126" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.18096514" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -193,7 +219,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="函数学习" />
     <MESSAGE value="生成器" />
-    <option name="LAST_COMMIT_MESSAGE" value="生成器" />
+    <MESSAGE value="重命名文件" />
+    <option name="LAST_COMMIT_MESSAGE" value="重命名文件" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$APPLICATION_CONFIG_DIR$/goland64.exe.vmoptions">
@@ -210,26 +237,36 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/05.Go语言函数/5.7_函数类型实现接口.go">
+    <entry file="file://$PROJECT_DIR$/05.Go语言函数/5.07_函数类型实现接口.go">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="124">
-          <caret line="23" column="17" lean-forward="true" selection-start-line="23" selection-start-column="17" selection-end-line="23" selection-end-column="17" />
+          <caret line="23" column="17" selection-start-line="23" selection-start-column="17" selection-end-line="23" selection-end-column="17" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/05.Go语言函数/5.8_闭包.go">
+    <entry file="file://$PROJECT_DIR$/05.Go语言函数/5.08_闭包.go">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="158">
-          <caret line="64" column="36" lean-forward="true" selection-start-line="64" selection-start-column="36" selection-end-line="64" selection-end-column="36" />
+          <caret line="64" column="36" selection-start-line="64" selection-start-column="36" selection-end-line="64" selection-end-column="36" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/05.Go语言函数/5.9_可变参数.go">
+    <entry file="file://$PROJECT_DIR$/05.Go语言函数/5.09_可变参数.go">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="252">
-          <caret line="96" column="11" lean-forward="true" selection-start-line="96" selection-start-column="11" selection-end-line="96" selection-end-column="11" />
+        <state relative-caret-position="1349">
+          <caret line="95" column="11" selection-start-line="95" selection-start-column="11" selection-end-line="95" selection-end-column="11" />
           <folding>
             <element signature="e#14#37#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/05.Go语言函数/5.10_延迟执行语句(defer).go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="874">
+          <caret line="46" column="1" lean-forward="true" selection-start-line="46" selection-start-column="1" selection-end-line="46" selection-end-column="1" />
+          <folding>
+            <element signature="e#140#165#0" expanded="true" />
           </folding>
         </state>
       </provider>
