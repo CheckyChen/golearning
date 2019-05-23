@@ -19,28 +19,28 @@ import (
 //	③T 为可变参数的类型，当 T 为 interface{} 时，传入的可以是任意类型。
 
 // 1、所有的参数都是可变参数：比如，fmt.Println()
-func Println(a ...interface{})(n int,err error){
-	return fmt.Fprintln(os.Stdout,a)
+func Println(a ...interface{}) (n int, err error) {
+	return fmt.Fprintln(os.Stdout, a)
 }
 
 // 2、部分参数是可变参数：比如，fmt.Printf()
 // fmt.Printf 的第一个参数为参数列表，后面的参数是可变参数
-func Printf(format string,a...interface{})(n int,err error){
-	return fmt.Fprintf(os.Stdout,format,a...)
+func Printf(format string, a ...interface{}) (n int, err error) {
+	return fmt.Fprintf(os.Stdout, format, a...)
 }
 
-func testFunc(a...string){
+func testFunc(a ...string) {
 	// a的类型为切片
 	fmt.Println(a)
 }
 
 // 打印每个参数的类型和值
-func printTypeValue(slist...interface{}) string{
+func printTypeValue(slist ...interface{}) string {
 	var b bytes.Buffer
-	for _,s:=range slist{
+	for _, s := range slist {
 
 		//使用 fmt.Sprintf 配合%v动词，可以将 interface{} 格式的任意值转为字符串
-		str:=fmt.Sprintf("%v",s)
+		str := fmt.Sprintf("%v", s)
 
 		var typeString string
 
@@ -68,20 +68,19 @@ func printTypeValue(slist...interface{}) string{
 
 // 可变参数变量是一个包含所有参数的切片，如果要在多个可变参数中传递参数，可以在传递时在可变参数变量中默认添加...，
 // 将切片中的元素进行传递，而不是传递可变参数变量本身
-func rawPrint(rawList...interface{}){
-	for _,a := range rawList{
+func rawPrint(rawList ...interface{}) {
+	for _, a := range rawList {
 		fmt.Println(a)
 	}
 }
 
-func print(slist...interface{}){
+func print(slist ...interface{}) {
 	rawPrint(slist...)
 	// 如果不加... 的话，那么传递的就是slist本身，类型为切片
 	rawPrint(slist)
 }
 
-
-func main(){
+func main() {
 	// 传入的值类型不受限制
 	Println(5, "hello", &struct{ a int }{1}, true)
 
@@ -89,11 +88,10 @@ func main(){
 	Printf("pure string\n")
 	Printf("value: %v %f\n", true, math.Pi)
 
-	testFunc("a","b","333")
+	testFunc("a", "b", "333")
 
-	fmt.Println(printTypeValue("a",true,33))
+	fmt.Println(printTypeValue("a", true, 33))
 
-	print(1,2,3,4)
+	print(1, 2, 3, 4)
 	print(1)
 }
-
