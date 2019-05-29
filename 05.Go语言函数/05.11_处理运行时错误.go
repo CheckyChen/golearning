@@ -2,6 +2,7 @@ package main
 
 import (
 	"errors"
+	"fmt"
 	"net"
 )
 
@@ -23,7 +24,7 @@ import (
 // 会返回 Conn 连接对象和 error；如果发生错误，error 会告知错误的类型，Conn 会返回空。
 //
 // 根据 Go 语言的错误处理机制，Conn 是其重要的返回值。因此，为这个函数增加一个错误返回，类似为 error。参见下面的代码：
-func Dial(network, address string) (Conn, error) {
+func Dial(network, address string) (net.Conn, error) {
 	var d net.Dialer
 	return d.Dial(network, address)
 }
@@ -71,4 +72,54 @@ type errorString struct {
 func (e *errorString) Error() string {
 	// 实现error接口的Error方法，该方法 返回成员中的错误描述
 	return e.s
+}
+
+// 2）在代码中使用错误定义
+var errDivisionByZero = errors.New("devision by zero")
+
+func div(dividend, divisor int) (int, error) {
+	if divisor == 0 {
+		return 0, errDivisionByZero
+	}
+	return dividend / divisor, nil
+}
+
+// 示例：在解析中使用自定义错误
+// 使用 errors.New 定义的错误字符串的错误类型是无法提供丰富的错误信息的。
+// 那么，如果需要携带错误信息返回，就需要借助自定义结构体实现错误接口。
+//
+// 下面代码将实现一个解析错误（ParseError），这种错误包含两个内容：文件名和行号。
+// 解析错误的结构还实现了 error 接口的 Error() 方法，返回错误描述时，就需要将文件名和行号返回。
+
+// 声明一个解析错误
+type ParseError struct {
+	Filename string // 文件名
+	Line     int    //行号
+}
+
+// 实现error接口，返回错误描述
+func (e *ParseError) Error() string {
+	return fmt.Sprint("%s:%d", e.Filename, e.Line)
+}
+
+// 创建一些解析错误
+func newParseError(filename string, line int) error {
+	return &ParseError{filename, line}
+}
+
+func main() {
+
+	fmt.Println(div(12, 0))
+
+	var e error
+	// 创建一个错误实例，包含文件名和行号
+	e = newParseError("main.go", 1)
+	// 通过error接口查看错误描述
+	fmt.Println(e.Error())
+	switch detail := e.(type) {
+	case *net.ParseError:
+		fmt.Printf("Filename: %s Line: %d\n", detail.Text, detail.Text)
+	default:
+		fmt.Println("other error")
+	}
 }
