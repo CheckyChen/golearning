@@ -132,6 +132,29 @@ func (s Heros) Swap(i, j int) {
 	s[i], s[j] = s[j], s[i]
 }
 
+// 2） 使用sort.Slice进行切片元素排序
+func sliceSort() {
+	heros := []*Hero{
+		{"吕布", Tank},
+		{"李白", Assassin},
+		{"妲己", Mage},
+		{"貂蝉", Assassin},
+		{"关羽", Tank},
+		{"诸葛亮", Mage},
+	}
+
+	sort.Slice(heros, func(i, j int) bool {
+		if heros[i].Kind != heros[j].Kind {
+			return heros[i].Kind < heros[j].Kind
+		}
+		return heros[i].Name < heros[j].Name
+	})
+
+	for _, v := range heros {
+		fmt.Printf("%+v\n", v)
+	}
+}
+
 func main() {
 	names := MyStringList{
 		"3. Triple Kill",
@@ -163,4 +186,6 @@ func main() {
 	for _, v := range heros {
 		fmt.Printf("%+v\n", v)
 	}
+	fmt.Println("=====================")
+	sliceSort()
 }
